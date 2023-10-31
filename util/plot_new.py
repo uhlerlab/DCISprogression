@@ -213,6 +213,7 @@ def plotCTcomp_exprs(stats2plotName,labels,scores,varNames,savepath,savenameclus
         ax.set_xticks(np.arange(np.unique(varNames).size))
         ax.set_xticklabels(np.unique(varNames))
         plt.setp(ax.get_xticklabels(), rotation=45, ha="right",rotation_mode="anchor")
+        fig.colorbar(im)
         fig.tight_layout()
         plt.savefig(os.path.join(savepath,savenamecluster+addname_i+stats2plotName[stati]+'.pdf'))
         plt.close()
